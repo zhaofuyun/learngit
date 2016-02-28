@@ -5,3 +5,4 @@ dlsjkfjsdjfsd
 dsf
 宋康
 zhangna
+Creating a new branch is quick & simple.
