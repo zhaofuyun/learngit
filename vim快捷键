@@ -1,0 +1,3 @@
+u撤销上一步操作
+ctrl+R前进
+在 vim 中使用 Ctrl-O 执行后退，使用 Ctrl-I 执行前进。
