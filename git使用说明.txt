@@ -1,0 +1,4 @@
+添加：git add filename
+提交：git commit -m '提交说明'
+推送GitHub：git push origin master
+
