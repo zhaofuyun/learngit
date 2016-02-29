@@ -1,0 +1,17 @@
+#!/usr/bin/expect
+#使用expect传递参数，第一个参数user，第二个参数host，第三个参数执行命令（如果是带参数的命令，用引号引起来）
+set user [lindex $argv 0]
+set host [lindex $argv 1]
+set passwd "123456"
+set cm [lindex $argv 2]
+
+spawn ssh $user@$host
+
+expect {
+"yes/no" { send "yes\r"}
+"password:" { send "$passwd\r" }
+}
+expect "]*"
+send "$cm\r"
+expect "]*"
+send "exit\r"
