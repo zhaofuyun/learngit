@@ -1,0 +1,16 @@
+#!/usr/bin/expect
+set user "root"
+set passwd "123456"
+
+spawn ssh $user@192.168.1.178
+
+expect {
+"yes/no" { send "yes\r"; exp_continue}
+"password:" { send "$passwd\r" }
+}
+expect "]*"
+send "touch /tmp/12.txt\r"
+expect "]*"
+send "echo 1212 > /tmp/12.txt\r"
+expect "]*"
+send "exit\r"
