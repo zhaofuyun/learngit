@@ -1,5 +1,5 @@
 #/bin/bash
-#使用break
+#区分continue、break、exit
 for i in `seq 1 10`
 do 
 	echo $i
